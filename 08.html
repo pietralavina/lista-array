@@ -9,11 +9,17 @@
     */
 
     //ENTRADA
-
+    const palavra = prompt(`Informe uma palavra:`);
+    const letra = prompt(`Informe a letra que deseja encontrar na palavra que acabou de digitar:`);
 
     //PROCESSAMENTO
-
+    let mensagem = "";
+    let acharLetra = palavra.search(letra);
+    (acharLetra >= 0) ? mensagem = `A letra se encontra na posição ${acharLetra + 1}.` : mensagem = "A letra não foi encontrada na palavra." ;
 
     //SAÍDA
+    document.write(mensagem);
+    
+    //Feito.
 
 </script>

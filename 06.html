@@ -13,11 +13,28 @@
     */
 
     //ENTRADA
+    const tipo = prompt(`Informe o tipo de veículo (SUV, Sedan ou Hatch):`);
+    const veic1 = prompt(`Informe um veículo a ser inserido na lista:`);
+    const veic2 = prompt(`Informe um segundo veículo a ser inserido na lista:`);
+    const veic3 = prompt(`Informe um terceiro veículo a ser inserido na lista:`);
 
 
     //PROCESSAMENTO
-
+    let adicionar ="";
+    let carrosSUV = ["Tiggo", "Sportage", "Tucson", "EcoSport"];
+    let carrosSedan = ["Civic", "Corolla", "Arizzo", "Fusion"];
+    let carrosHatch = ["308", "Focus", "i30"];
+    if (tipo == "SUV") {
+        adicionar = carrosSUV.push(veic1, veic2, veic3);
+    } else if (tipo == "Sedan") {
+        adicionar = carrosSedan.push(veic1, veic2, veic3);
+    } else {
+        adicionar = carrosHatch.push(veic1, veic2, veic3);
+    }
 
     //SAÍDA
+    document.write(`Lista final de cada veículo: <br> Carros SUV: `, carrosSUV.join(", "), `<br> Carros Sedan: `, carrosSedan.join(", "), `<br> Carros Hatch: `, carrosHatch.join(", "));
 
+    //Feito.
+    
 </script>

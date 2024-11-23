@@ -9,16 +9,26 @@
     */
 
     //ENTRADA
-    let carrosSUV = ["Tiggo", "Sportage", "Tucson", "EcoSport"];
-    let carrosSUVNova = ["Tiggo", "Sportage", "Tucson", "EcoSport"];
-    const remover = prompt(`Informe qual carro deseja remover da lista: ${carrosSUV.join(", ")}`);
+    let listaAntiga = ["Tiggo", "Sportage", "Tucson", "EcoSport"];
+    let listaNova = ["Tiggo", "Sportage", "Tucson", "EcoSport"];
+    const remover = prompt(`Qual carro deseja remover da seguinte lista: ${listaAntiga.join(", ")}?`);
 
     //PROCESSAMENTO
-    let lista;
-    let mensagem;
-    if  
-
+    let lista = "";
+    let mensagem; 
+    let removido = listaNova.indexOf(remover);
+        if (removido >= 0) {
+            lista = listaNova.splice(removido, 1)
+            document.write(`A lista antiga de SUV: `, listaAntiga.join(", "), `<br>`);
+            mensagem = "A nova lista após a remoção do veículo é: " + " " +  listaNova.join(", ");
+        }
+        else {
+           mensagem = `Esse veículo não está na lista.`;
+        }
 
     //SAÍDA
+    document.write(mensagem);
+
+    //Feito.
 
 </script>
